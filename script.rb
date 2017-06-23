@@ -72,7 +72,7 @@ def update_html
 		p artist['name']
 
 		responses = @graph.get_connection("#{artist['var']}", 'feed', {
-	  		limit: '20',
+	  		limit: '50',
 	  		fields: ['message', 'actions', 'child_attachments', 'id', 'from', 'type', 'picture', 'link', 'created_time', 'updated_time']
 	})
 
