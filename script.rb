@@ -5,7 +5,7 @@ require 'active_support'
 require 'active_support/core_ext'
 require 'json'
 require_relative('./secret')
-require_relative('./mail')
+# require_relative('./mail')
 
 def send_notifications_if_new(shares)
 	shares.each do |link|
