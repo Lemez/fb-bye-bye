@@ -28,6 +28,10 @@ set :output, "#{SCRIPT_ROOT}/log/cron_log.log"
 # without sending mail update
 every 2.hours do
 	command "echo '*************'"
+	command "rvm use ruby-2.3.3"
 	command "ruby -r '#{SCRIPT_ROOT}/script.rb' -e 'update_html'"
 	command "echo '*************'"
 end
+
+# update with
+# whenever --update-crontab

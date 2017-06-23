@@ -1,1 +1,6 @@
 *************
+/Users/JW/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:54:in `require': cannot load such file -- koala (LoadError)
+	from /Users/JW/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/JW/Websites/facebook-replace/script.rb:3:in `<top (required)>'
+	from /Users/JW/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/JW/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:54:in `require'
