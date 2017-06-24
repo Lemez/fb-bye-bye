@@ -5,4 +5,5 @@ gem 'rake'
 gem 'whenever', :require => false
 gem 'koala'
 gem 'activesupport'
+gem 'fastimage'
 

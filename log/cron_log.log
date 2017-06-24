@@ -22,3 +22,33 @@ Please report a bug if this causes problems.
 "***** Prince Rama Varma: 1 items *****"
 "***** MDR: 1 items *****"
 "***** Rasikas: 1 items *****"
+*************
+2017-06-24 18:00:07 +0530
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+"Updating page - Prince Rama Varma"
+"Updating page - MDR"
+"Updating page - Rasikas"
+"***** Prince Rama Varma: 1 items *****"
+"***** MDR: 1 items *****"
+"***** Rasikas: 1 items *****"
+*************
+2017-06-24 22:00:03 +0530
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+"Updating page - Prince Rama Varma"
+"Updating page - MDR"
+"Updating page - Rasikas"
+"Prince Rama Varma: 37 items"
+"*************************************"
+*************************************
+"MDR: 42 items"
+"******************************************"
+******************************************
+"Rasikas: 41 items"
+"*****************************************"
+*****************************************

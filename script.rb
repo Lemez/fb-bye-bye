@@ -4,6 +4,8 @@ require 'koala'
 require 'active_support'
 require 'active_support/core_ext'
 require 'json'
+require 'uri'
+require 'fastimage'
 
 Dir.glob("lib/*.rb").each{|f| require_relative(f)}
 
@@ -16,9 +18,9 @@ def update_html
 		# get_data(FRIENDS)
 
 		get_data(ARTISTS)
+
 		all_data = render_page
-		save_file_as(all_data, 'index.html')
-	
+		
 end
 
 def get_data(object)
@@ -61,6 +63,35 @@ def get_data(object)
 
 	
 
+end
+
+def resolve_image(item)
+	pic = item["picture"]
+
+	if pic.nil?
+
+		pic = "https://qph.ec.quoracdn.net/main-qimg-1678635ef8d482d92921313df9227a35-c"
+	
+	elsif URI.unescape(pic).include?("ytimg") || URI.unescape(pic).include?("youtube")
+
+		pic = URI.unescape(pic)
+		starting = pic[(pic.index("url=")+4)...-1]
+		pic = (starting.include?("?") ?  starting[0...starting.index("?")] : starting[0...starting.index("&")])
+	
+	elsif URI.unescape(pic).include?("http://www")	
+		pic = URI.unescape(pic)
+
+		starting = pic[pic.index("http://www")...-1]
+
+		if starting.include?("jpg")
+			pic = starting[0...(starting.index("jpg")+3)] 
+		elsif starting.include?("png")
+			pic = starting[0...(starting.index("png")+3)]
+		end
+		
+	end
+
+	pic
 end
 
 def render_page
@@ -113,11 +144,15 @@ def render_page
 		@opening += "<h2 style='min-width:33%;position:fixed;text-align:center;background:white;line-height:2em;'>#{artist['name']}</h2>"
 		data = File.readlines("json/#{artist['file']}")
 
-		p "***** #{artist['name']}: #{data.length} items *****"
+		size = JSON.parse(data[0]).length
+		puts "#{artist['name']}: #{size} items"
+		puts ("*" * size)
 		
-		data.each do |d| 
+		data.each do |d|
+			
 			obj = JSON.parse(d)
-			obj.each do |item|
+			obj.each_with_index do |item,index|
+				print("*") 
 
 				date = Date.parse(item['updated_time']).strftime("%A, %d %b %Y")
 				extrastyle = (item==obj.first ? 'margin-top:2em;' : '')
@@ -125,19 +160,33 @@ def render_page
 				header = item['type'].titleize
 				message = item['message']
 
-				pic = item["picture"]
-				photo = "<img src='#{pic}' width='300'/>"
-				
+				pic = resolve_image(item)
+
+				if pic.include?('default') 
+					picwidth = 1280 
+				else 
+					dimensions = FastImage.size(pic)
+
+					if dimensions.nil?
+						picwidth = 0
+					else
+						picwidth = dimensions[0]
+					end
+				end
+
+				picstyle = (picwidth < 300 ? "auto" : "90%")
+				photo = "<img src='#{pic}' style='width:#{picstyle};text-align:center;' />"
+	
 				@opening += %Q( 
-									<div style='border: 1px solid gray;padding-left:2em;#{extrastyle}'>
-										<h3>#{header}</h3>
-										<h4>#{from}</h4>
-										<h6>#{date}</h6>
-										<a href='#{item["link"]}' style='font-decoration:none;'>
-											#{photo}
-										</a>
-											<p style='font-size:1em;'>#{message}</p>
-									</div>
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;#{extrastyle}'>
+									<h3>#{header}</h3>
+									<h4>#{from}</h4>
+									<h6>#{date}</h6>
+									<a href='#{item["link"]}' style='font-decoration:none;'>
+										#{photo}
+									</a>
+										<p style='font-size:1em;'>#{message}</p>
+								</div>
 							)		
 			end
 		end 
@@ -145,9 +194,13 @@ def render_page
 		unless artist==ARTISTS.last 
 			@opening +=%Q(</div><div class='w3-third' style='overflow: auto; max-height: 100vh;'>)
 		end
+
+		print "\n"
 	end
 
-	@opening + @closing
+	all_data = @opening + @closing
+
+	save_file_as(all_data, 'index.html')
 
 end
 
