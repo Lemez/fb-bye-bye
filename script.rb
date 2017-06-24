@@ -5,7 +5,7 @@ require 'active_support'
 require 'active_support/core_ext'
 require 'json'
 
-Dir.glob("config/*.rb").each{|f| require_relative(f)}
+Dir.glob("lib/*.rb").each{|f| require_relative(f)}
 
 def update_html
 
