@@ -1,9 +1,15 @@
-# Use this file to easily define all of your cron jobs.
-#
-# It's helpful, but not entirely necessary to understand cron before proceeding.
-# http://en.wikipedia.org/wiki/Cron
+SCRIPT_ROOT = "/Users/JW/Websites/fb-bye-bye"
 
-# Example:
+set :output, "#{SCRIPT_ROOT}/log/cron_log.log"
+
+every 2.hours do
+	rake "update"
+end
+
+# Update from command line with "whenever --update-crontab"
+# Learn more: http://github.com/javan/whenever
+
+# Use this file to easily define all of your cron jobs.
 #
 # set :output, "/path/to/my/cron_log.log"
 #
@@ -16,19 +22,3 @@
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
 # end
-
-# Learn more: http://github.com/javan/whenever
-
-SCRIPT_ROOT = "/Users/JW/Websites/fb-bye-bye"
-
-set :output, "#{SCRIPT_ROOT}/log/cron_log.log"
-#
-# with sending mail update
-
-# without sending mail update
-every 2.hours do
-	rake "update"
-end
-
-# update with
-# whenever --update-crontab
