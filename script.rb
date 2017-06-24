@@ -179,13 +179,12 @@ def render_page
 	
 				@opening += %Q( 
 								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;#{extrastyle}'>
-									<h3>#{header}</h3>
-									<h4>#{from}</h4>
-									<h6>#{date}</h6>
+									<h4><span>#{from}</span></h4>
+									<h6 style='width:100%;'><span>#{date}</span><span style='float:right;'>#{header}</span></h6>
 									<a href='#{item["link"]}' style='font-decoration:none;'>
 										#{photo}
 									</a>
-										<p style='font-size:1em;'>#{message}</p>
+										<p style='font-size:0.9em;overflow:hidden;'>#{message}</p>
 								</div>
 							)		
 			end
