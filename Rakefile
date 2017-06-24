@@ -1,7 +1,7 @@
 require 'rake'
 require 'bundler'
 
-SCRIPT_ROOT = "/Users/JW/Websites/facebook-replace"
+SCRIPT_ROOT = "/Users/JW/Websites/fb-bye-bye"
 
 task :update do |t|
 	system "echo '*************'"

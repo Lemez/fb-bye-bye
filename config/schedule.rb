@@ -19,7 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
-SCRIPT_ROOT = "/Users/JW/Websites/facebook-replace"
+SCRIPT_ROOT = "/Users/JW/Websites/fb-bye-bye"
 
 set :output, "#{SCRIPT_ROOT}/log/cron_log.log"
 #
