@@ -13,23 +13,54 @@ def update_html
 		token = @oauth.get_app_access_token
 		@graph = Koala::Facebook::API.new(token)
 
-	ARTISTS.each do |artist|
+		# get_data(FRIENDS)
 
-		p "Updating page - #{artist['name']}"
-
-		responses = @graph.get_connection("#{artist['page_id']}", 'feed', {
-	  		limit: '50',
-	  		fields: ['message', 'actions', 'child_attachments', 'id', 'from', 'type', 'picture', 'link', 'created_time', 'updated_time']
-	})
-
-		shares = responses.reject{|m| m['picture'].nil? && m['link'].nil? }
-		save_file_as(shares.to_json, "json/#{artist['file']}")
+		get_data(ARTISTS)
+		all_data = render_page
+		save_file_as(all_data, 'index.html')
 	
+end
+
+def get_data(object)
+	case object
+	when ARTISTS
+		object.each do |artist|
+
+			p "Updating page - #{artist['name']}"
+
+			responses = @graph.get_connection("#{artist['page_id']}", 'feed', {
+	  			limit: '50',
+	  			fields: ['message', 'actions', 'child_attachments', 'id', 'from', 'type', 'picture', 'link', 'created_time', 'updated_time']
+			})
+
+			shares = responses.reject{|m| m['picture'].nil? && m['link'].nil? }
+			save_file_as(shares.to_json, "json/#{artist['file']}")
+
+		end
+	when FRIENDS
+		responses = []
+		users = FRIENDS['people'].collect{|o|o['page_id']}.map(&:to_i)
+		p users
+
+		@graph.batch do |batch_api|
+
+			users.each do |user|
+				p batch_api.get_connections(user,'permissions')
+				responses << batch_api.get_connections(user, 'posts', {
+	  				limit: '20',
+	  				fields: ['message', 'actions', 'child_attachments', 'id', 'from', 'type', 'picture', 'link', 'created_time', 'updated_time']
+				})
+			end
+		end
+
+		p responses
+
+		shares = responses.flatten.sort{|x,y| Time.parse(y['updated_time']) <=> Time.parse(x['updated_time'])}
+		save_file_as(shares.to_json, "json/#{FRIENDS['file']}")
 	end
 
-	all_data = render_page
-	save_file_as(all_data, 'index.html')
 	
+
 end
 
 def render_page

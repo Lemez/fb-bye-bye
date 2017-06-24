@@ -1,0 +1,24 @@
+*************
+2017-06-24 12:17:16 +0530
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+"Updating page - Prince Rama Varma"
+"Updating page - MDR"
+"Updating page - Rasikas"
+"***** Prince Rama Varma: 1 items *****"
+"***** MDR: 1 items *****"
+"***** Rasikas: 1 items *****"
+*************
+2017-06-24 16:00:10 +0530
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+"Updating page - Prince Rama Varma"
+"Updating page - MDR"
+"Updating page - Rasikas"
+"***** Prince Rama Varma: 1 items *****"
+"***** MDR: 1 items *****"
+"***** Rasikas: 1 items *****"
