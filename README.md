@@ -1,4 +1,4 @@
-#What is this?
+# What is this?
 
 An application to replace the horrible Facebook web app. I would delete my FB account were it not for two things:
 
@@ -16,7 +16,7 @@ It carries out a few simple steps:
 
 Facebook's crappy interface - bye bye!
 
-#How To Use
+# How To Use
 
 1. Go to the [Facebook developers site](https://developers.facebook.com/apps/) and add a new application
 2. Create a _lib/koala.rb_ page with the following info from the new application settings page:   
@@ -43,11 +43,21 @@ Facebook's crappy interface - bye bye!
                  ] 
 You can get the page_id from [here](https://lookup-id.com/).
 
-4.  Test that the API is working by manually running the functions *update_html* or *render_page* from Terminal when inside the directory. This will update the _index.html_ page, or provide some insightful errors if the project is not set up properly. To see if the API call is working properly and creating json files:```ruby -r "./script.rb" -e "update_html"``` or if you want to tamper with just the html/css: ```ruby -r "./script.rb" -e "render_page"```
+4.  Test that the API is working by manually running the functions *update_html* or *render_page* from Terminal when inside the directory. This will update the _index.html_ page, or provide some insightful errors if the project is not set up properly. To see if the API call is working properly and creating json files:
+        
+        ruby -r "./script.rb" -e "update_html"
+or if you want to tamper with just the html/css: 
 
-5.  Update your computer's cron tab in order to make your machine search for updates according to the frequency in *config/schedule.rb* ```whenever --update-crontab``` and check that is has worked by listing cron jobs: ```crontab -l```
+        ruby -r "./script.rb" -e "render_page"
 
-6.  Download a _Replace New Tab_ extension in the browser of your choice and direct it to */path/to/your/project/fb-bye-bye/index.html* in order to have the page visible every time you open a new tab.
+5.  Update your computer's cron tab in order to make your machine request updates every few hours or days, according to the frequency specified in *config/schedule.rb* (current default is every 2 hours) 
+        
+        whenever --update-crontab
+and check that the updating has worked by listing cron jobs: 
+        
+        crontab -l
+
+6.  Download a [_Replace New Tab Page_ extension](https://chrome.google.com/webstore/detail/replace-new-tab-page/cnkhddihkmmiiclaipbaaelfojkmlkja) in the browser of your choice and direct it to */path/to/my/project/fb-bye-bye/index.html* in order to see your updated page every time you open a new browser tab. Happy days!
 
 
  
