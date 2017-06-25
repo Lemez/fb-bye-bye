@@ -1,4 +1,4 @@
-SCRIPT_ROOT = "/Users/JW/Websites/fb-bye-bye"
+require_relative ('./constants')
 
 set :output, "#{SCRIPT_ROOT}/log/cron_log.log"
 

@@ -215,6 +215,13 @@ def render_page
 							  right: 0;
 							}
 						.new_stories {margin-right:20px;min-width:50px;font-size:24px;background-color:red;color:white;border-radius:25px;}
+						
+						.story{
+							overflow-x:hidden;
+							border-bottom: 2px dotted gray;
+							padding:0 5px 0 5px;
+							margin:0 1em 0 1em;
+						}
 					</style>
 					<body>
 
@@ -307,7 +314,7 @@ def render_page
 				photo = "<img src='#{pic}' style='width:#{picstyle};text-align:center;' />"
 	
 				@opening += %Q( 
-								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;#{extrastyle}'>
+								<div class='story' style='#{extrastyle}'>
 									<h4><span>#{from}</span></h4>
 									<h6 style='width:100%;'><span>#{date}</span><span class='np-icon' style='float:right;'><img src='#{icon}' alt='#{header} icon' title='#{header}'/></span></h6>
 									<a href='#{item["link"]}' style='font-decoration:none;'>

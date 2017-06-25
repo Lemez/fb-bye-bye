@@ -17,7 +17,12 @@ ARTISTS = [
 					{'name' => 'Bombay Jayashree',
 					'file' => 'bombay.json',
 					'page_id' => '1552867064939140'
+					},
+					{'name' => 'Aruna Sairam',
+					'file' => 'aruna.json',
+					'page_id' => '337612212936368'
 					}
+					
 
 					# {'name' => 'Sanjay Subramanian',
 					# 'file' => 'sanjay.json',
