@@ -147,7 +147,6 @@ def read_updates_json
 end
 
 def render_page
-
 	@opening = %Q(
 				<!DOCTYPE html>
 				<html>
@@ -161,6 +160,15 @@ def render_page
 						<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 					</head>
+					<script>
+					function isScrolledIntoView(el) {
+    					var elemTop = el.getBoundingClientRect().top;
+    					var elemBottom = el.getBoundingClientRect().bottom;
+
+    					var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    					return isVisible;
+}
+					</script>
 					<style>
 						body,h1 {font-family: "Montserrat", sans-serif}
 						img {margin-bottom: -7px}
@@ -177,19 +185,20 @@ def render_page
 							flex: 0 0 auto;
 							margin-top: 5vh;
 						}
-
 						.navbar{font-size: 22px;
 							padding: 5px 10px;
 							width: 100vw;
 							position:fixed;
 						}
-
 						.navitem{
-							min-width:33%;
+							width:85%;
 							text-align: center;
     						font-size: 1.5rem;
+    						border-bottom: 3px solid rgba(0,0,0,0.1);
+    						font-size: 1.5rem;
+    						margin-left: 5%;
+    						padding-bottom: 5px;
 						}
-
 						.scrolltext {
 							float:right;
 							margin-right: 5px;
@@ -206,16 +215,13 @@ def render_page
 							  background-color: #fa3e3e;
 							  border-radius: 2px;
 							  color: white;
-							 
 							  padding: 1px 3px;
 							  font-size: 10px;
-							  
 							  position: absolute; /* Position the badge within the relatively positioned button */
 							  top: 0;
 							  right: 0;
 							}
 						.new_stories {margin-right:20px;min-width:50px;font-size:24px;background-color:red;color:white;border-radius:25px;}
-						
 						.story{
 							overflow-x:hidden;
 							border-bottom: 2px dotted gray;
@@ -224,39 +230,17 @@ def render_page
 						}
 					</style>
 					<body>
-
-						<!-- !PAGE CONTENT! -->
 						<div class="navbar"><span class='scrolltext'>Scroll right -></span></div>
 						<div class="w3-content">
-
-
-							<!-- Grid -->
-							
-							<!-- <div class='w3-row'>-->
-								<div class='w3-third' style='overflow: auto; max-height: 100vh;'>
-								
+								<div class='w3-third' style='overflow: auto; max-height: 100vh;'>	
 				  )
 
-		@closing = %Q(
-								
+		@closing = %Q(	
 								</div>
-							<!-- </div>-->
-							
-
-							<!-- End Page Content -->
 						</div>
-
-						<!-- Footer -->
-						<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
-					  		<p class="w3-medium">Powered by <a href="https://www.ruby-lang.org/en/" target="_blank" class="w3-hover-text-green">Ruby</a>, <a href="https://github.com/arsduo/koala" target="_blank" class="w3-hover-text-green">Koala</a> and <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-						</footer>
-				 
 					</body>
 				</html>
 			)
-
-
-
 
 	ARTISTS.each do |artist|
 
@@ -315,7 +299,7 @@ def render_page
 	
 				@opening += %Q( 
 								<div class='story' style='#{extrastyle}'>
-									<h4><span>#{from}</span></h4>
+									<h5><span>#{from}</span></h5>
 									<h6 style='width:100%;'><span>#{date}</span><span class='np-icon' style='float:right;'><img src='#{icon}' alt='#{header} icon' title='#{header}'/></span></h6>
 									<a href='#{item["link"]}' style='font-decoration:none;'>
 										#{photo}
