@@ -17,7 +17,6 @@ It carries out a few simple steps:
 Facebook's crappy interface - bye bye!
 
 # How To Use
-
 1. Go to the [Facebook developers site](https://developers.facebook.com/apps/) and add a new application
 2. Create a _lib/koala.rb_ page with the following info from the new application settings page:   
      
@@ -59,7 +58,8 @@ and check that the updating has worked by listing cron jobs:
 
 6.  Download a [_Replace New Tab Page_ extension](https://chrome.google.com/webstore/detail/replace-new-tab-page/cnkhddihkmmiiclaipbaaelfojkmlkja) in the browser of your choice and direct it to */path/to/my/project/fb-bye-bye/index.html* in order to see your updated page every time you open a new browser tab. Happy days!
 
-
+## Miscellaneous
+Notification count indicates the number of new stories since the last update, not since the last time the page has opened.
  
 
 

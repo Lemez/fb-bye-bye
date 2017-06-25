@@ -26,7 +26,7 @@ end
 def update_html
 
 		initializeFBApi
-		
+
 		get_data(ARTISTS,true)
 
 		save_last
@@ -219,13 +219,15 @@ def render_page
 		new_story_count_artist = updates.select{|o|o.keys.first==artist['name']}.first
 		new_story_count = new_story_count_artist.values.first
 
+		notification_span = (new_story_count.to_i==0 ? \
+							"" : \
+							"<span class='button__badge'>#{new_story_count}</span>")
+
 		@opening += "<nav class='navbar' style='min-width:33%;position:fixed;text-align:center;background:white;'>
 						#{artist['name']}
 						<div class='mybutton'>
     						<i class='fa fa-comments'></i>
-							<span class='button__badge'>
-								#{new_story_count}
-							</span>
+							#{notification_span}
 						</div>
 					</nav>"
 		data = File.readlines("json/#{artist['file']}")
