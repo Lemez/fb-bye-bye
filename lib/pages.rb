@@ -9,14 +9,14 @@ ARTISTS = [
 					'page_id' => '137283749618848'
 					},
 
-					# {'name' => 'Bombay Jayashree',
-					# 'file' => 'bombay.json',
-					# 'page_id' => '1552867064939140'
-					# },
-
 					{'name' => 'Rasikas',
 					'file' => 'rasikas.json',
 					'page_id' => '2210833262'
+					},
+
+					{'name' => 'Bombay Jayashree',
+					'file' => 'bombay.json',
+					'page_id' => '1552867064939140'
 					}
 
 					# {'name' => 'Sanjay Subramanian',

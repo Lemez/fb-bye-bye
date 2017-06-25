@@ -165,8 +165,37 @@ def render_page
 						body,h1 {font-family: "Montserrat", sans-serif}
 						img {margin-bottom: -7px}
 						.w3-row-padding img {margin-bottom: 12px}
+						.w3-content{
+    						display: flex;
+  							flex-wrap: nowrap;
+  							overflow-x: auto;
+  							max-width:10000px;
+  							-webkit-overflow-scrolling: touch;
+  							-ms-overflow-style: -ms-autohiding-scrollbar; 
+						}
+						.w3-third{
+							flex: 0 0 auto;
+							margin-top: 5vh;
+						}
+
+						.navbar{font-size: 22px;
+							padding: 5px 10px;
+							width: 100vw;
+							position:fixed;
+						}
+
+						.navitem{
+							min-width:33%;
+							text-align: center;
+    						font-size: 1.5rem;
+						}
+
+						.scrolltext {
+							float:right;
+							margin-right: 5px;
+							font-size: 12px;
+						}
 						.np-icon {margin-right:5px;min-width:20px;}
-						 .navbar{font-size: 22px;padding: 5px 10px;}
 						.mybutton {
 						  color: black;
 						  display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
@@ -190,16 +219,22 @@ def render_page
 					<body>
 
 						<!-- !PAGE CONTENT! -->
-						<div class="w3-content" style="max-width:1500px">
+						<div class="navbar"><span class='scrolltext'>Scroll right -></span></div>
+						<div class="w3-content">
+
 
 							<!-- Grid -->
-							<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+							
+							<!-- <div class='w3-row'>-->
 								<div class='w3-third' style='overflow: auto; max-height: 100vh;'>
+								
 				  )
 
 		@closing = %Q(
+								
 								</div>
-							</div>
+							<!-- </div>-->
+							
 
 							<!-- End Page Content -->
 						</div>
@@ -213,23 +248,26 @@ def render_page
 				</html>
 			)
 
-	updates = read_updates_json
+
+
 
 	ARTISTS.each do |artist|
-		new_story_count_artist = updates.select{|o|o.keys.first==artist['name']}.first
+
+		new_story_count_artist = read_updates_json.select{|o|o.keys.first==artist['name']}.first
 		new_story_count = new_story_count_artist.values.first
 
 		notification_span = (new_story_count.to_i==0 ? \
 							"" : \
 							"<span class='button__badge'>#{new_story_count}</span>")
 
-		@opening += "<nav class='navbar' style='min-width:33%;position:fixed;text-align:center;background:white;'>
+		@opening += "<div class='navitem' >
 						#{artist['name']}
 						<div class='mybutton'>
     						<i class='fa fa-comments'></i>
 							#{notification_span}
 						</div>
-					</nav>"
+					</div>"
+		
 		data = File.readlines("json/#{artist['file']}")
 
 		size = JSON.parse(data[0]).length

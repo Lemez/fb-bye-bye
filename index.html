@@ -15,8 +15,37 @@
 						body,h1 {font-family: "Montserrat", sans-serif}
 						img {margin-bottom: -7px}
 						.w3-row-padding img {margin-bottom: 12px}
+						.w3-content{
+    						display: flex;
+  							flex-wrap: nowrap;
+  							overflow-x: auto;
+  							max-width:10000px;
+  							-webkit-overflow-scrolling: touch;
+  							-ms-overflow-style: -ms-autohiding-scrollbar; 
+						}
+						.w3-third{
+							flex: 0 0 auto;
+							margin-top: 5vh;
+						}
+
+						.navbar{font-size: 22px;
+							padding: 5px 10px;
+							width: 100vw;
+							position:fixed;
+						}
+
+						.navitem{
+							min-width:33%;
+							text-align: center;
+    						font-size: 1.5rem;
+						}
+
+						.scrolltext {
+							float:right;
+							margin-right: 5px;
+							font-size: 12px;
+						}
 						.np-icon {margin-right:5px;min-width:20px;}
-						 .navbar{font-size: 22px;padding: 5px 10px;}
 						.mybutton {
 						  color: black;
 						  display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
@@ -40,18 +69,22 @@
 					<body>
 
 						<!-- !PAGE CONTENT! -->
-						<div class="w3-content" style="max-width:1500px">
+						<div class="navbar"><span class='scrolltext'>Scroll right -></span></div>
+						<div class="w3-content">
+
 
 							<!-- Grid -->
-							<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+							
+							<!-- <div class='w3-row'>-->
 								<div class='w3-third' style='overflow: auto; max-height: 100vh;'>
-				  <nav class='navbar' style='min-width:33%;position:fixed;text-align:center;background:white;'>
+								
+				  <div class='navitem' >
 						Prince Rama Varma
 						<div class='mybutton'>
     						<i class='fa fa-comments'></i>
-							<span class='button__badge'>2</span>
+							
 						</div>
-					</nav> 
+					</div> 
 								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;margin-top:2em;'>
 									<h4><span>Karthi Pillai</span></h4>
 									<h6 style='width:100%;'><span>Sunday, 25 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1018049_cc.svg' alt='video icon' title='video'/></span></h6>
@@ -524,13 +557,13 @@ We are blessed and lucky to have this opportunity to have these blissful days wi
 									</a>
 										<p style='font-size:0.9em;overflow:hidden;'>All smiles 😊😄 ...</p>
 								</div>
-							</div><div class='w3-third' style='overflow: auto; max-height: 100vh;'><nav class='navbar' style='min-width:33%;position:fixed;text-align:center;background:white;'>
+							</div><div class='w3-third' style='overflow: auto; max-height: 100vh;'><div class='navitem' >
 						MDR
 						<div class='mybutton'>
     						<i class='fa fa-comments'></i>
 							
 						</div>
-					</nav> 
+					</div> 
 								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;margin-top:2em;'>
 									<h4><span>Venkata Kailasam</span></h4>
 									<h6 style='width:100%;'><span>Sunday, 28 May 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
@@ -1041,14 +1074,23 @@ http://www.4shared.com/mp3/qRCWvsa6ba/05-kAmAkSi_anudinamu-SWARAJATI.html</p>
 
 http://www.4shared.com/mp3/_u9xAGvBba/04-Emani_nE-mukhAri_MDR-new_18.html</p>
 								</div>
-							</div><div class='w3-third' style='overflow: auto; max-height: 100vh;'><nav class='navbar' style='min-width:33%;position:fixed;text-align:center;background:white;'>
+							</div><div class='w3-third' style='overflow: auto; max-height: 100vh;'><div class='navitem' >
 						Rasikas
 						<div class='mybutton'>
     						<i class='fa fa-comments'></i>
-							<span class='button__badge'>3</span>
+							<span class='button__badge'>1</span>
 						</div>
-					</nav> 
+					</div> 
 								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;margin-top:2em;'>
+									<h4><span>Hima Bindu Paluri</span></h4>
+									<h6 style='width:100%;'><span>Sunday, 25 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1018049_cc.svg' alt='video icon' title='video'/></span></h6>
+									<a href='https://www.facebook.com/438401519842442/videos/440517186297542/' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t15.0-10/p130x130/18534873_440518019630792_163563354042925056_n.jpg?oh=eb5cd02b820547d39dee0a09f1c319b9&oe=59D12D0C' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
 									<h4><span>Vinod Singer</span></h4>
 									<h6 style='width:100%;'><span>Sunday, 25 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
 									<a href='https://www.facebook.com/photo.php?fbid=1067955586638297&set=gm.10154718775033263&type=3' style='font-decoration:none;'>
@@ -1286,15 +1328,6 @@ Live Webcast: </p>
 								</div>
 							 
 								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
-									<h4><span>Hima Bindu Paluri</span></h4>
-									<h6 style='width:100%;'><span>Saturday, 24 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1018049_cc.svg' alt='video icon' title='video'/></span></h6>
-									<a href='https://www.facebook.com/438401519842442/videos/440517186297542/' style='font-decoration:none;'>
-										<img src='https://scontent.xx.fbcdn.net/v/t15.0-10/p130x130/18534873_440518019630792_163563354042925056_n.jpg?oh=eb5cd02b820547d39dee0a09f1c319b9&oe=59D12D0C' style='width:auto;text-align:center;' />
-									</a>
-										<p style='font-size:0.9em;overflow:hidden;'></p>
-								</div>
-							 
-								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
 									<h4><span>Pratibha Sarathy</span></h4>
 									<h6 style='width:100%;'><span>Saturday, 24 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1018049_cc.svg' alt='video icon' title='video'/></span></h6>
 									<a href='https://www.facebook.com/Pratibha.Music/videos/1529527570433192/' style='font-decoration:none;'>
@@ -1401,9 +1434,401 @@ Live Webcast: </p>
 									</a>
 										<p style='font-size:0.9em;overflow:hidden;'>Mohini Attam Dancer . India.</p>
 								</div>
+							</div><div class='w3-third' style='overflow: auto; max-height: 100vh;'><div class='navitem' >
+						Bombay Jayashree
+						<div class='mybutton'>
+    						<i class='fa fa-comments'></i>
 							
+						</div>
+					</div> 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;margin-top:2em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 17 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2265692170323289/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/18767889_2265692170323289_8939985035840141792_n.jpg?oh=0a51f4ad92c9a15a0fa54dc219515712&oe=59E1B516' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
 								</div>
-							</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Sunday, 04 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.governancenow.com/news/regular-story/bombay-jayashri-ramnath-singer-carnatic-vocalist-life-of-pi-oscar-nominated-pi-lullaby' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQDwlGMhqb-lKrPf&w=130&h=130&url=http%3A%2F%2Fgovernancenow.com%2Ftemp%2Fbombay_jayashri.jpg&cfs=1&sx=142&sy=0&sw=530&sh=530&_nc_hash=AQDoh1PMeyhYoz9B' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.governancenow.com/news/regular-story/bombay-jayashri-ramnath-singer-carnatic-vocalist-life-of-pi-oscar-nominated-pi-lullaby</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 12 May 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://bombayjayashri.com/2017/05/04/musical-homage-to-saint-tyagaraja/' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQCrPBNUU5LYZwro&w=130&h=130&url=http%3A%2F%2Fbombayjayashri.com%2Fwpr%2Fwp-content%2Fuploads%2F2017%2F05%2FThe-Hindu-Tyagaraja.jpg&cfs=1&sx=356&sy=0&sw=304&sh=304&_nc_hash=AQAqF8PP6ZqRhO2s' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://bombayjayashri.com/2017/05/04/musical-homage-to-saint-tyagaraja/</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 10 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://bombayjayashri.com/2017/05/05/like-the-meandering-cauvery/' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?w=130&h=130&url=http%3A%2F%2Fbombayjayashri.com%2Fwpr%2Fwp-content%2Fuploads%2F2017%2F05%2FThe-Hindu-Like-the-meandering-Cauvery-New.jpg&cfs=1&_nc_hash=AQD2gRPLl1za1uOd' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>THE HINDU 4th May 2017
+http://bombayjayashri.com/2017/05/05/like-the-meandering-cauvery/</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Thursday, 04 May 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://bombayjayashri.com/2017/04/12/from-india-with-love/' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQAi5Xo1SfPjWbeu&w=130&h=130&url=http%3A%2F%2Fbombayjayashri.com%2Fwpr%2Fwp-content%2Fuploads%2F2017%2F04%2Fdubai-poster-for-website.jpg&cfs=1&_nc_hash=AQCr4MWQOeJuZkR-' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://bombayjayashri.com/2017/04/12/from-india-with-love/</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Monday, 01 May 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://bombayjayashri.com/2017/04/13/thyagaraja-jayanthi-homage/' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQAPuPJ6FQHUnr_z&w=130&h=130&url=http%3A%2F%2Fbombayjayashri.com%2Fwpr%2Fwp-content%2Fuploads%2F2017%2F04%2FTyagarajaswami-e1493304383678.jpg&cfs=1&_nc_hash=AQAn1vRsmTuahKSN' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://bombayjayashri.com/2017/04/13/thyagaraja-jayanthi-homage/</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Monday, 01 May 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://bombayjayashri.com/2017/04/24/matrubhooteshwari/' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQAiqUhrmBMrc8Pb&w=130&h=130&url=http%3A%2F%2Fbombayjayashri.com%2Fwpr%2Fwp-content%2Fuploads%2F2017%2F01%2FBJ-CONCERT-SELF-24.jpg&cfs=1&sx=97&sy=0&sw=667&sh=667&_nc_hash=AQDjP2tROoK-5yly' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://bombayjayashri.com/2017/04/24/matrubhooteshwari/</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 02 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2238254099733763/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/18010618_2238254099733763_7761835315111136889_n.png?oh=472ae72e1055e033f45f11149b152daa&oe=59C65A51' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>Guru Vandanam
+Kapaleeshwarar Temple 18th April 2017</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Tuesday, 18 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2236970963195410/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/q82/s130x130/18010748_2236970963195410_5841480900006558347_n.jpg?oh=2bb74227a398cba5fc69fe973b5a4cd8&oe=59E4F10E' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 15 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.thehindu.com/entertainment/music/bombay-jayashri-reaches-out-to-kids-with-autism/article17986218.ece' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQAUdIFr5ZE9er7c&w=130&h=130&url=http://www.thehindu.com/entertainment/music/article17986217.ece/ALTERNATES/LANDSCAPE_615/14frMusicJPG&cfs=1&_nc_hash=AQCZWDyymNCFM0WU' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.thehindu.com/entertainment/music/bombay-jayashri-reaches-out-to-kids-with-autism/article17986218.ece</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 14 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2234105246815315/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17884562_2234105246815315_6256020318977697571_n.jpg?oh=9ee7a519ba6be908f460e9e9d8b059ff&oe=59C5CAFA' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>It is indeed Thyagaraja Swami's blessing, that the drama depicting His life story is being staged at Cleveland Thyagaraja Aradhanai, today 13th April 2017.
+With a script by V S Varadarajan Sir and Direction by TV Varadarajan Sir, here's wishing Hearty Congratulations to the entire team on its 80th show!!</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 07 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2228990353993471/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17634421_2228990353993471_37965110339350577_n.jpg?oh=f9871ce6e389d17f0fdc8ac7a324c0ba&oe=59D4C021' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Thursday, 06 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2228979583994548/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17760120_2228979583994548_6275904906883717828_n.jpg?oh=1f69289636c5929035529ab2fd99960b&oe=59D941B3' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>APRIL 5TH, INAUGURAL CONCERT AT SRI RAMA SEVA MANDALI, BENGALURU</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Tuesday, 04 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2226191280940045/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17626478_2226191280940045_5309860006289754013_n.jpg?oh=0aa37a3349aa4b6b1e80d34763b56e75&oe=59D7E143' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Tuesday, 04 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2226189650940208/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17760152_2226189650940208_4464044094469403883_n.jpg?oh=211e1966da0f52d139d8350766c638e2&oe=59E17C3C' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 17 Jun 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1018049_cc.svg' alt='video icon' title='video'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/videos/2225395011019672/' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t15.0-10/s130x130/17758874_2225399201019253_6228224928827572224_n.jpg?oh=7a96bdeaa253853c5c053bee645245eb&oe=59E6404D' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>Autism awareness day at Elliots beach!</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Sunday, 02 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2225206447705195/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17757238_2225206447705195_7967676711633693698_n.jpg?oh=cf6feb3c3b29fafd12d4b9249dc6fd27&oe=59D9B351' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Wednesday, 29 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2222421847983655/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17626098_2222421847983655_1904523827860141039_n.jpg?oh=9107e896fa116e08753a36c5d7ad6dcb&oe=59DF39BF' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>Chembai Government Music College - 28th March 2017</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 08 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1018049_cc.svg' alt='video icon' title='video'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/videos/2222415224650984/' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t15.0-10/s130x130/17619916_2222421177983722_9023773335967760384_n.jpg?oh=306a409b1cc1fb46afa728158bb8808d&oe=59DE887A' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>Sheer joy to begin this auspicious day of Ugadi in the hallowed Chembai Government Music College, with ragam Asaveri. Our hearts reverberating with the music of students.</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Sunday, 02 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.bombayjayashri.com/' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t45.1600-4/p130x130/16632821_6063476529075_5520931522703523840_n.png?oh=3c16f80d4a2f66453633ded7c0e680f3&oe=59D1B991' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>Dear all,
+
+I'm pleased to share with you the new version of www.bombayjayashri.com — my online presence for sharing my thoughts, work updates on performances, events and music.
+
+The idea for changing the site, was to make my connection with the online community more active, current, and useful. The site has a number of features to keep track of upcoming events and cherish memories of them with photos and videos.
+
+Its also more personal, in that it will  capture articles I've written and music I listen to while sharing small audio and video clips from my work day.
+
+More than all this, its now allows me to highlight the work we do at Hitham, which has its own home and blog on the site. I hope to reach out more from here going forward.
+
+The website will be the home of all the content that would be further shared on Facebook, Youtube, and Twitter.
+
+I hope you enjoy browsing the content on the site.</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Wednesday, 29 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1553171261575387.1073741825.1552867064939140/2221586574733849/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/p130x130/17523273_2221586574733849_7813686277686834294_n.jpg?oh=90dba8f79513d5d6de1b98ecfc194751&oe=59DE0B5E' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Tuesday, 28 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1556895477869632.1073741827.1552867064939140/2221586241400549/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17426246_2221586241400549_1603807945071325891_n.jpg?oh=5b7ff5f71f136ccd5b2adbe0b221be47&oe=59DEC5D5' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 24 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.thehindu.com/entertainment/music/bombay-jayashri-perceives-alignment-as-an-experience-to-music-lyric-and-emotion/article17475489.ece' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t45.1600-4/c39.0.130.130/p130x130/17508497_6066375750875_6530801122813149184_n.png?oh=cc3b8d3edcbaca66a491f80f373526e9&oe=59DC077A' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.thehindu.com/entertainment/music/bombay-jayashri-perceives-alignment-as-an-experience-to-music-lyric-and-emotion/article17475489.ece</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 14 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2218599991699174/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17457255_2218599991699174_1915507908806239711_n.png?oh=6002a887c4376d66a5c5a181b9b6fa8f&oe=59D113F9' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Thursday, 23 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2218597648366075/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17426274_2218597648366075_3289008489496795974_n.jpg?oh=ed05878c12236e5466f6cfb0d857f053&oe=59E3C14A' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Wednesday, 22 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.thehindu.com/entertainment/music/showcasing-the-grandeur-of-carnatic-music/article17472190.ece' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t45.1600-4/c78.0.130.130/p130x130/17861041_6066375751075_5332934134073393152_n.png?oh=68711d0c714a2eaed0316ebd9f27e03b&oe=59D29E17' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.thehindu.com/entertainment/music/showcasing-the-grandeur-of-carnatic-music/article17472190.ece</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Wednesday, 22 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://bangaloremirror.indiatimes.com/bangalore/others/and-the-award-goes-to-melody/articleshow/57610054.cms' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t45.1600-4/p130x130/17860574_6066375751875_2741193096338341888_n.png?oh=b7ba6f4b2273e9aeb332f8593eef6d3c&oe=59D7249F' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://bangaloremirror.indiatimes.com/bangalore/others/and-the-award-goes-to-melody/articleshow/57610054.cms</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Tuesday, 21 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://timesofindia.indiatimes.com/city/bengaluru/a-sunday-of-classic-jugalbandi-at-chowdiah-memorial-hall-bengaluru/articleshow/57616537.cms' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQDJ8COFMY8G8N-L&w=130&h=130&url=http%3A%2F%2Ftimesofindia.indiatimes.com%2Fphoto%2F57616529.cms%3F76277&cfs=1&sx=119&sy=0&sw=600&sh=600&_nc_hash=AQAClLnfBVQmq7Bf' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://timesofindia.indiatimes.com/city/bengaluru/a-sunday-of-classic-jugalbandi-at-chowdiah-memorial-hall-bengaluru/articleshow/57616537.cms</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Thursday, 23 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.dnaindia.com/lifestyle/interview-loving-bombay-jayashree-2358236/amp' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQBJQDH8nSJFaJMF&w=130&h=130&url=http%3A%2F%2Fstatic.dnaindia.com%2Fsites%2Fdefault%2Ffiles%2F2017%2F03%2F18%2F557764-jayashri.jpg&cfs=1&sx=125&sy=0&sw=360&sh=360&_nc_hash=AQDNzZ7dF_WO-XWd' style='width:90%;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.dnaindia.com/lifestyle/interview-loving-bombay-jayashree-2358236/amp</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Tuesday, 21 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2216920898533750/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17426128_2216920898533750_5434315988746092577_n.jpg?oh=cd08ddfcd12aba6fe2ac0d3ff302db29&oe=59DBF1F7' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>Shruti - March 2017 issue</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 17 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2213502815542225/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17353554_2213502815542225_5950833463735238801_n.png?oh=8c9472609a769ab62812d9c6089853f3&oe=59CE73B2' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 11 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2210201505872356/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17190769_2210201505872356_1989522215353232612_n.jpg?oh=23d260e5de5327a14bfc61b3255919d2&oe=59E13ED4' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Friday, 10 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2208708186021688/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17190738_2208708186021688_8699631588898204656_n.jpg?oh=c54315e3ba395bb3c520ada83f830c14&oe=59C761E6' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Monday, 06 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2202228336669673/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/16998104_2202228336669673_8377450065084839772_n.jpg?oh=db6ef96dc3ab7c76a241424353996b4f&oe=59E059B2' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 11 Mar 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.thehindu.com/entertainment/music/Moment-of-discovery/article17312982.ece' style='font-decoration:none;'>
+										<img src='http://www.thehindu.com/static/theme/default/base/img/og-image.jpg' style='width:90%;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.thehindu.com/entertainment/music/Moment-of-discovery/article17312982.ece</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Monday, 13 Feb 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://epaper.newindianexpress.com/1099400/The-New-Sunday-Express-Magazine/12022017#page/1/1' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQD0k0ODtwE7tZrj&w=130&h=130&url=http%3A%2F%2Fd2na0fb6srbte6.cloudfront.net%2Fread%2Fimageapi%2Fcoverforissue%2F1099400%2Fnewspaper%2F300&cfs=1&sx=0&sy=0&sw=300&sh=300&_nc_hash=AQB0sxSb7_RsdUBy' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://epaper.newindianexpress.com/1099400/The-New-Sunday-Express-Magazine/12022017#page/1/1</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Thursday, 26 Jan 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.scmp.com/news/hong-kong/education-community/article/2064383/life-pi-indian-musician-touches-chord-autistic' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQA7KHucVA9p-Ywx&w=130&h=130&url=http%3A%2F%2Fcdn2.i-scmp.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F620x356%2Fpublic%2Fimages%2Fmethode%2F2017%2F01%2F22%2Faf320e8e-e059-11e6-8fcb-68eb4ed74971_image_hires.JPG%3Fitok%3DA-mC4T-C&cfs=1&sx=254&sy=0&sw=356&sh=356&_nc_hash=AQBdA4WkFpkmMHwQ' style='width:90%;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.scmp.com/news/hong-kong/education-community/article/2064383/life-pi-indian-musician-touches-chord-autistic</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Monday, 23 Jan 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1582535871972259.1073741828.1552867064939140/2178088825750291/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/16114798_2178088825750291_8551755264071077128_n.jpg?oh=ffa4e4343d6a4a8dab1efd04d7c269c0&oe=59DDB521' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Saturday, 14 Jan 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.thehindu.com/entertainment/music/Weaving-a-web-of-swaras/article17028359.ece' style='font-decoration:none;'>
+										<img src='https://external.xx.fbcdn.net/safe_image.php?d=AQCrd5kN6S_4-Y5u&w=130&h=130&url=http://www.thehindu.com/entertainment/music/article17028358.ece/BINARY/13FRJAYASHRI2_BOMBAY&cfs=1&sx=0&sy=0&sw=451&sh=451&_nc_hash=AQCrM_MOFmBVPXvj' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.thehindu.com/entertainment/music/Weaving-a-web-of-swaras/article17028359.ece</p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Sunday, 15 Jan 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_778937_cc.svg' alt='photo icon' title='photo'/></span></h6>
+									<a href='https://www.facebook.com/BombayJayashriRamnath/photos/a.1556895477869632.1073741827.1552867064939140/2170928719799635/?type=3' style='font-decoration:none;'>
+										<img src='https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/15977444_2170928719799635_566305811149933205_n.jpg?oh=f148905df1b1f6e622fd755e762125ab&oe=59E4E0EA' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'></p>
+								</div>
+							 
+								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;'>
+									<h4><span>Bombay Jayashri Ramnath</span></h4>
+									<h6 style='width:100%;'><span>Sunday, 02 Apr 2017</span><span class='np-icon' style='float:right;'><img src='assets/noun_1038899_cc.svg' alt='link icon' title='link'/></span></h6>
+									<a href='http://www.thehindu.com/todays-paper/tp-national/tp-tamilnadu/Bombay-Jayashree-enthrals-audience-with-light-beginning-brisk-chittais/article17016296.ece' style='font-decoration:none;'>
+										<img src='http://www.thehindu.com/todays-paper/tp-national/tp-tamilnadu/article17016295.ece/BINARY/08jan_PFB-the-r+GBH13R2E7.3.jpg' style='width:auto;text-align:center;' />
+									</a>
+										<p style='font-size:0.9em;overflow:hidden;'>http://www.thehindu.com/todays-paper/tp-national/tp-tamilnadu/Bombay-Jayashree-enthrals-audience-with-light-beginning-brisk-chittais/article17016296.ece</p>
+								</div>
+							
+								
+								</div>
+							<!-- </div>-->
+							
 
 							<!-- End Page Content -->
 						</div>

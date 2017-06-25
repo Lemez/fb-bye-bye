@@ -70,3 +70,26 @@ MDR: 42 items
 Rasikas: 39 items
 ***************************************
 ***************************************
+*************
+2017-06-25 12:00:04 +0530
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+"Updating page - Prince Rama Varma"
+"Updating page - MDR"
+"Updating page - Rasikas"
+"Updating page - Bombay Jayashree"
+[{"Prince Rama Varma"=>0}, {"MDR"=>0}, {"Rasikas"=>1}, {"Bombay Jayashree"=>0}]
+Prince Rama Varma: 36 items
+************************************
+************************************
+MDR: 42 items
+******************************************
+******************************************
+Rasikas: 38 items
+**************************************
+**************************************
+Bombay Jayashree: 41 items
+*****************************************
+*****************************************
