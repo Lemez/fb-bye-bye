@@ -9,21 +9,66 @@ require 'fastimage'
 
 Dir.glob("lib/*.rb").each{|f| require_relative(f)}
 
+$icons={:photo=>'assets/noun_778937_cc.svg',:video=>'assets/noun_1018049_cc.svg',:link=>'assets/noun_1038899_cc.svg'}
+
+def initializeFBApi
+	@oauth = Koala::Facebook::OAuth.new
+	token = @oauth.get_app_access_token
+	@graph = Koala::Facebook::API.new(token)
+end
+
+def test
+	initializeFBApi
+	get_data(ARTISTS,false)
+	read_updates_json
+end
+
 def update_html
 
-		@oauth = Koala::Facebook::OAuth.new
-		token = @oauth.get_app_access_token
-		@graph = Koala::Facebook::API.new(token)
+		initializeFBApi
+		
+		get_data(ARTISTS,true)
 
-		# get_data(FRIENDS)
-
-		get_data(ARTISTS)
+		save_last
 
 		all_data = render_page
 		
 end
 
-def get_data(object)
+def load_last
+	last = {}
+	data = JSON.parse(File.readlines("json/last.json")[0])
+	data.each{|e| last[e.keys.first]=e.values.first}
+	last	
+end
+
+def save_last
+
+	results = []
+	ARTISTS.each do |artist|
+		data = JSON.parse(File.readlines("json/#{artist['file']}")[0])
+		results << {artist['name']=>data.first['id']}
+	end
+
+	save_file_as(results.to_json, 'json/last.json')
+
+end
+
+def how_many_new_stories?(newdata,name)
+
+	last_data = load_last
+	last_id_for_artist = last_data[name]
+
+	ids = newdata.collect{|d|d['id']}
+	index = ids.index(last_id_for_artist)
+
+	index
+
+end
+
+def get_data(object,saving)
+
+	updates = []
 	case object
 	when ARTISTS
 		object.each do |artist|
@@ -36,9 +81,16 @@ def get_data(object)
 			})
 
 			shares = responses.reject{|m| m['picture'].nil? && m['link'].nil? }
-			save_file_as(shares.to_json, "json/#{artist['file']}")
+
+			newstories = how_many_new_stories?(shares,artist['name'])
+			updates << {artist['name']=>newstories}
+
+			save_file_as(shares.to_json, "json/#{artist['file']}") if saving
 
 		end
+
+		save_file_as(updates.to_json, "json/updates.json")
+
 	when FRIENDS
 		responses = []
 		users = FRIENDS['people'].collect{|o|o['page_id']}.map(&:to_i)
@@ -55,14 +107,9 @@ def get_data(object)
 			end
 		end
 
-		p responses
-
 		shares = responses.flatten.sort{|x,y| Time.parse(y['updated_time']) <=> Time.parse(x['updated_time'])}
-		save_file_as(shares.to_json, "json/#{FRIENDS['file']}")
+		save_file_as(shares.to_json, "json/#{FRIENDS['file']}") if saving
 	end
-
-	
-
 end
 
 def resolve_image(item)
@@ -94,6 +141,11 @@ def resolve_image(item)
 	pic
 end
 
+def read_updates_json
+	updates = JSON.parse(File.readlines("json/updates.json")[0])
+	p updates
+end
+
 def render_page
 
 	@opening = %Q(
@@ -101,10 +153,11 @@ def render_page
 				<html>
 					<head>
 						<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-						<title>Carnatic Facebook</title>
+						<title>Foosbake</title>
 						<meta charset="UTF-8">
 						<meta name="viewport" content="width=device-width, initial-scale=1">
 						<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+						<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
 						<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 					</head>
@@ -112,6 +165,27 @@ def render_page
 						body,h1 {font-family: "Montserrat", sans-serif}
 						img {margin-bottom: -7px}
 						.w3-row-padding img {margin-bottom: 12px}
+						.np-icon {margin-right:5px;min-width:20px;}
+						 .navbar{font-size: 22px;padding: 5px 10px;}
+						.mybutton {
+						  color: black;
+						  display: inline-block; /* Inline elements with width and height. TL;DR they make the icon buttons stack from left-to-right instead of top-to-bottom */
+						  position: relative; /* All 'absolute'ly positioned elements are relative to this one */
+						  padding: 2px 5px; /* Add some padding so it looks nice */
+						}
+						.button__badge {
+							  background-color: #fa3e3e;
+							  border-radius: 2px;
+							  color: white;
+							 
+							  padding: 1px 3px;
+							  font-size: 10px;
+							  
+							  position: absolute; /* Position the badge within the relatively positioned button */
+							  top: 0;
+							  right: 0;
+							}
+						.new_stories {margin-right:20px;min-width:50px;font-size:24px;background-color:red;color:white;border-radius:25px;}
 					</style>
 					<body>
 
@@ -139,9 +213,21 @@ def render_page
 				</html>
 			)
 
-	ARTISTS.each do |artist|
+	updates = read_updates_json
 
-		@opening += "<h2 style='min-width:33%;position:fixed;text-align:center;background:white;line-height:2em;'>#{artist['name']}</h2>"
+	ARTISTS.each do |artist|
+		new_story_count_artist = updates.select{|o|o.keys.first==artist['name']}.first
+		new_story_count = new_story_count_artist.values.first
+
+		@opening += "<nav class='navbar' style='min-width:33%;position:fixed;text-align:center;background:white;'>
+						#{artist['name']}
+						<div class='mybutton'>
+    						<i class='fa fa-comments'></i>
+							<span class='button__badge'>
+								#{new_story_count}
+							</span>
+						</div>
+					</nav>"
 		data = File.readlines("json/#{artist['file']}")
 
 		size = JSON.parse(data[0]).length
@@ -154,10 +240,13 @@ def render_page
 			obj.each_with_index do |item,index|
 				print("*") 
 
-				date = Date.parse(item['updated_time']).strftime("%A, %d %b %Y")
 				extrastyle = (item==obj.first ? 'margin-top:2em;' : '')
+
+				date = Date.parse(item['updated_time']).strftime("%A, %d %b %Y")
 				from = "#{item['from']['name']}"
-				header = item['type'].titleize
+				header = item['type']
+				icon = $icons[header.to_sym]
+
 				message = item['message']
 
 				pic = resolve_image(item)
@@ -180,7 +269,7 @@ def render_page
 				@opening += %Q( 
 								<div style='border: 1px solid gray;padding:0 5px 0 5px;margin:0 1em 0 1em;#{extrastyle}'>
 									<h4><span>#{from}</span></h4>
-									<h6 style='width:100%;'><span>#{date}</span><span style='float:right;'>#{header}</span></h6>
+									<h6 style='width:100%;'><span>#{date}</span><span class='np-icon' style='float:right;'><img src='#{icon}' alt='#{header} icon' title='#{header}'/></span></h6>
 									<a href='#{item["link"]}' style='font-decoration:none;'>
 										#{photo}
 									</a>
@@ -206,6 +295,7 @@ end
 def save_file_as(d,target)
 	File.open(target, "w") {|file|file.puts(d)}
 end
+
 
 
 
@@ -253,5 +343,7 @@ end
 def get_detailed_info(link)
 	@graph.get_object(link[:id])
 end
+
+
 
 

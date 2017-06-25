@@ -52,3 +52,21 @@ Please report a bug if this causes problems.
 "Rasikas: 41 items"
 "*****************************************"
 *****************************************
+*************
+2017-06-25 00:00:05 +0530
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+"Updating page - Prince Rama Varma"
+"Updating page - MDR"
+"Updating page - Rasikas"
+Prince Rama Varma: 36 items
+************************************
+************************************
+MDR: 42 items
+******************************************
+******************************************
+Rasikas: 39 items
+***************************************
+***************************************
