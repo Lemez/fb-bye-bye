@@ -7,6 +7,18 @@ ARTISTS = [
 					'file' => 'tmk.json',
 					'page_id' => '46654980815'
 					},
+					{'name' => 'AV',
+					'file' => 'av.json',
+					'page_id' => '445276358816359'
+					},
+					{'name' => 'AV Social',
+					'file' => 'avsocial.json',
+					'page_id' => '347569692013687'
+					},
+					{'name' => 'AV OutreachMedia',
+					'file' => 'av-outmedia.json',
+					'page_id' => '899932450044181'
+					},
 					
 					{'name' => 'MDR',
 					'file' => 'mdr.json',

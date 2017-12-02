@@ -20602,3 +20602,49 @@ Aruna Sairam: 40 items
 Bombay Jayashree: 45 items
 *********************************************
 *********************************************
+*************
+2017-12-02 08:00:36 +0530
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+"Updating page - Prince Rama Varma"
+"Updating page - T.M. Krishna"
+"Updating page - AV"
+"Updating page - AV Social"
+"Updating page - MDR"
+"Updating page - Rasikas"
+"Updating page - Aruna Sairam"
+"Updating page - Bombay Jayashree"
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+Prince Rama Varma: 50 items
+**************************************************
+**************************************************
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+T.M. Krishna: 50 items
+**************************************************
+**************************************************
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+AV: 50 items
+**************************************************
+**************************************************
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+AV Social: 50 items
+**************************************************
+**************************************************
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+MDR: 50 items
+**************************************************
+**************************************************
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+Rasikas: 50 items
+**************************************************
+**************************************************
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+Aruna Sairam: 50 items
+**************************************************
+**************************************************
+[{"Prince Rama Varma"=>0}, {"T.M. Krishna"=>0}, {"AV"=>0}, {"AV Social"=>0}, {"MDR"=>0}, {"Rasikas"=>0}, {"Aruna Sairam"=>0}, {"Bombay Jayashree"=>0}]
+Bombay Jayashree: 50 items
+**************************************************
+**************************************************

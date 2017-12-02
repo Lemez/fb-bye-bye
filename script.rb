@@ -9,7 +9,7 @@ require 'fastimage'
 
 Dir.glob("lib/*.rb").each{|f| require_relative(f)}
 
-$icons={:photo=>'assets/noun_778937_cc.svg',:video=>'assets/noun_1018049_cc.svg',:link=>'assets/noun_1038899_cc.svg'}
+$icons={:photo=>'assets/noun_778937_cc.svg',:video=>'assets/noun_1018049_cc.svg',:link=>'assets/noun_1038899_cc.svg',:status=>'assets/noun_13795_cc.svg'}
 
 def initializeFBApi
 	@oauth = Koala::Facebook::OAuth.new
@@ -88,7 +88,7 @@ def get_data(object,saving)
 	  			fields: ['message', 'actions', 'child_attachments', 'id', 'from', 'type', 'picture', 'link', 'created_time', 'updated_time']
 			})
 
-			shares = responses.reject{|m| m['picture'].nil? && m['link'].nil? }
+			shares = responses # .reject{|m| m['picture'].nil? && m['link'].nil? }
 
 			newstories = how_many_new_stories?(shares,artist['name'])
 			updates << {artist['name'] => newstories}
@@ -125,7 +125,7 @@ def resolve_image(item)
 
 	if pic.nil?
 
-		pic = "https://qph.ec.quoracdn.net/main-qimg-1678635ef8d482d92921313df9227a35-c"
+		pic = "assets/FFFFFF-0.8.png"
 	
 	elsif URI.unescape(pic).include?("ytimg") || URI.unescape(pic).include?("youtube")
 
@@ -290,7 +290,7 @@ def render_page
 
 				date = Date.parse(item['updated_time']).strftime("%A, %d %b %Y")
 				from = "#{item['from']['name']}"
-				header = item['type']
+				header = item['type'] #only 'event' does not have icon associated
 				icon = $icons[header.to_sym]
 
 				message = item['message']
@@ -314,11 +314,12 @@ def render_page
 	
 				@opening += %Q( 
 								<div class='story' style='#{extrastyle}'>
-									<h5><span>#{from}</span></h5>
-									<h6 style='width:100%;'><span>#{date}</span><span class='np-icon' style='float:right;'><img src='#{icon}' alt='#{header} icon' title='#{header}'/></span></h6>
 									<a href='#{item["link"]}' style='font-decoration:none;'>
-										#{photo}
-									</a>
+										<h5><span>#{from}</span></h5>
+										<h6 style='width:100%;'><span>#{date}</span><span class='np-icon' style='float:right;'><img src='#{icon}' alt='#{header} icon' title='#{header}'/></span></h6>
+									
+											#{photo}
+										</a>
 										<p style='font-size:0.9em;overflow:hidden;'>#{message}</p>
 								</div>
 							)		
