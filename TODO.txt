@@ -1,0 +1,5 @@
+1) Add admin panel for:
+  - adding pages via fb URL can be done automatically from the page
+  - ordering of columns
+  - (possibly) logging in as other users
+  - (possbily) add about - eg why this only works with pages, and not with your home page / friend's profiles

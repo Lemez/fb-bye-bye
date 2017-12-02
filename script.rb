@@ -293,6 +293,11 @@ def render_page
 				header = item['type'] #only 'event' does not have icon associated
 				icon = $icons[header.to_sym]
 
+				if header=='status'
+					# to do - extract image from here
+					# p item
+				end
+
 				message = item['message']
 
 				pic = resolve_image(item)
