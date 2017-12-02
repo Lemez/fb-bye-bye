@@ -23,6 +23,14 @@ def test
 	read_updates_json
 end
 
+def test_msg
+
+	 initializeFBApi
+	 p @graph
+		responses = @graph.get_connections("me", "feed")
+		p responses.inspect
+end
+
 def update_html
 
 		initializeFBApi
@@ -83,13 +91,13 @@ def get_data(object,saving)
 			shares = responses.reject{|m| m['picture'].nil? && m['link'].nil? }
 
 			newstories = how_many_new_stories?(shares,artist['name'])
-			updates << {artist['name']=>newstories}
+			updates << {artist['name'] => newstories}
 
 			save_file_as(shares.to_json, "json/#{artist['file']}") if saving
 
 		end
 
-		save_file_as(updates.to_json, "json/updates.json")
+		save_file_as(updates.to_json, "json/updates.json") if saving
 
 	when FRIENDS
 		responses = []
@@ -155,10 +163,9 @@ def render_page
 						<title>Foosbake</title>
 						<meta charset="UTF-8">
 						<meta name="viewport" content="width=device-width, initial-scale=1">
-						<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-						<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+						<link rel="stylesheet" href="assets/w3.css">
 						<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+						<link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
 					</head>
 					<script>
 					function isScrolledIntoView(el) {
@@ -172,7 +179,14 @@ def render_page
 					<style>
 						body,h1 {font-family: "Montserrat", sans-serif}
 						img {margin-bottom: -7px}
+						.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
+
 						.w3-row-padding img {margin-bottom: 12px}
+						.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+						.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}
+						@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{width:24.99999%}.w3-col.m4,.w3-third{width:33.33333%}
+						.w3-content{max-width:980px;margin:auto}.w3-rest{overflow:hidden}
+
 						.w3-content{
     						display: flex;
   							flex-wrap: nowrap;
@@ -185,6 +199,7 @@ def render_page
 							flex: 0 0 auto;
 							margin-top: 5vh;
 						}
+
 						.navbar{font-size: 22px;
 							padding: 5px 10px;
 							width: 100vw;
